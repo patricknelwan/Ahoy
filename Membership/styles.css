@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.6;
+  background-color: #f3f3f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  background-color: #f3f3f3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #80989A;
+}
+
+nav ul li:hover {
+  transform: scale(1.025);
+}
+
+nav ul li a.active {
+  color: #80989A;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+#membership {
+  height: 80vh;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 90px;
+}
+
+#membership h2 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+#membership .subtext {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.form-container form .form-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.form-container form .form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-container form .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+}
+
+.checkbox-container a {
+  color: #80989A;
+  text-decoration: none;
+}
+
+.checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin: 0; 
+  width: 16px;
+  height: 16px;
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer; 
+  transition: all 0.3s ease;
+}
+
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #80989A; 
+  border-color: #80989A; 
+}
+
+button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  transition-duration: 0.3s;
+}
+
+.submit-btn {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.submit-btn:hover {
+  background-color: #80989A;
+  color: white;
+  transform: scale(1.025);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  background-color: #000;
+  color: #fff;
+}
+
+footer .footer-logo img {
+  height: 50px;
+}
+
+footer .copyright {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer .copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+footer .social-media img {
+  height: 20px;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; 
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #membership {
+    padding: 1.5rem;
+    margin-top: 70px; 
+  }
+
+  #membership h2 {
+    font-size: 2rem;
+  }
+
+  #membership .subtext {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-container {
+    padding: 1.5rem;
+    max-width: 90%; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container form .form-group label {
+    font-size: 0.9rem; 
+  }
+
+  .form-container form .form-group input,
+  select {
+    font-size: 0.9rem; 
+    padding: 0.4rem; 
+  }
+
+  button {
+    font-size: 0.9rem; 
+    padding: 10px 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  footer .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  footer .copyright {
+    font-size: 0.7rem; 
+    margin-bottom: 1rem;
+  }
+  
+  footer .social-media img {
+    height: 16px;
+  }
+}

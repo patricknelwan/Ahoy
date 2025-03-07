@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  line-height: 1.6;
+  background-color: #f3f3f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10rem;
+  background-color: #f3f3f3;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #80989A;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+nav ul li:hover {
+  transform: scale(1.025);
+}
+
+nav ul li a.active {
+  color: #80989A;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+#banner {
+  text-align: center;
+  padding: 10rem;
+  background-image: url('/Assets/background.png');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#banner img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  transition: transform 0.3s ease;
+}
+
+
+#desc {
+  text-align: center;
+  padding: rem;
+  background-size: cover;
+  background-position: center;
+  margin-top: 25px;
+}
+
+#desc h1 {
+  font-size: 3rem;
+  color: black;
+  margin-top: 5%;
+}
+
+#desc p {
+  font-size: larger;
+  color: black;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 2%;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.icons img {
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.025);
+}
+
+.icon {
+  transition: filter 0.3 ease;
+}
+
+#gallery {
+  text-align: center;
+  padding: 2rem;
+}
+
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: rem;
+}
+
+#gallery p {
+  font-size: larger;
+  color: black;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 10px;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  height: 330px;
+  width: 250px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background-color: #000;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 18px 45px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.join {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.join:hover {
+  background-color: #80989A;
+  color: white;
+  transform: scale(1.05);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  background-color: #000;
+  color: #fff;
+}
+
+footer .footer-logo img {
+  height: 50px;
+}
+
+footer .copyright {
+  text-align: center;
+  flex-grow: 1;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+footer .copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+footer .social-media img {
+  height: 20px;
+  margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f3f3f3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    gap: 1rem;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #banner {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 4rem;
+  }
+  
+  #banner img {
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  #desc h1{
+    font-size: medium;
+  }
+
+  #desc p {
+    font-size: small;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .icons img{
+    height: 20px;
+    width: 20px;
+  }
+
+  #gallery p {
+    font-size: small;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  #gallery h2{
+    font-size: medium;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  footer .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  footer .copyright {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  footer .social-media img {
+    height: 16px;
+  }
+}
